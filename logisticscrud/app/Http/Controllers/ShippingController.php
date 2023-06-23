@@ -42,6 +42,13 @@ class ShippingController extends Controller
         return redirect('logistics')->with('flash_message', 'Shipment Added!');  
     }
 
+    public function show($id)
+    {
+        $shipping = Shipping::find($id);
+        return view('logistics.show')->with('shipping', $shipping);
+    }
+
+
     public function edit($shp_id)
     {
         $shipping = Shipping::find($shp_id);

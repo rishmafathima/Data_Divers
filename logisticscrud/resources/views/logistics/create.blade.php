@@ -39,6 +39,19 @@
                                 <input type="date" class="form-control" placeholder="Shipping Date" name="shp_date"/>
                             </div>
                             <div class="form-group">
+                                <label for="scourier" class="form-label mt-4">Courier</label>
+                                <select class="form-select" name="shp_courier" id="exampleSelect1">
+                                    <option value="JnT" >JnT</option>
+                                    <option value="Poslaju" >Poslaju</option>
+                                    <option value="DHL" >DHL</option>
+                                    <option value="NinjaVan" >NinjaVan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="scomment" class="form-label mt-4">Comment</label>
+                                <input type="text" class="form-control" placeholder="Shipping Date" name="shp_comment"/>
+                            </div>
+                            <div class="form-group">
                                 <label for="status" class="form-label mt-4">Status</label>
                                 <select class="form-select" name="shp_status" id="exampleSelect1">
                                     <option value="1" >Pending</option>

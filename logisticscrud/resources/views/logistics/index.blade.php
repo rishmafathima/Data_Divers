@@ -744,7 +744,6 @@
 							<!--begin::Table row-->
 							<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
 								<th class="min-w-50px">Shipping ID</th>
-								<th class="min-w-50px">Order ID</th>
 								<th class="min-w-100px">Shipping Date</th>
 								<th class="min-w-100px">Status</th>
 								<th class="min-w-100px">Action</th>
@@ -759,9 +758,6 @@
 							<tr>
 								<!--begin::Date=-->
 								<td>{{$shp->shp_id}}</td>
-								<!--end::Date=-->
-								<!--begin::Date=-->
-								<td>{{$shp->shp_oid}}</td>
 								<!--end::Date=-->
 								<!--begin::Shipping ID=-->
 								<td>{{$shp->shp_date}}</td>
@@ -781,6 +777,7 @@
 								<!--end::Shipping ID=-->
 								<!--begin::No orders=-->
 								<td>
+									<a href="{{ url('/logistics/' . $shp->shp_id) }}" title="View Shipping"><button class="btn btn-info btn-sm">View</button></a>
 									<a href="{{ url('/logistics/' . $shp->shp_id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm">Edit</button></a>
 									<form method="POST" action="{{ url('/logistics' . '/' . $shp->shp_id) }}" accept-charset="UTF-8" style="display:inline">
 										{{ method_field('DELETE') }}

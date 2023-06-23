@@ -40,6 +40,19 @@
                                 <input type="date" class="form-control" placeholder="Shipping Date" name="shp_date" value="{{$shipping->shp_date}}"/>
                             </div>
                             <div class="form-group">
+                                <label for="scourier" class="form-label mt-4">Courier</label>
+                                <select class="form-select" name="shp_courier" id="exampleSelect1">
+                                    <option value="JnT" {{ $shipping->shp_courier == "JnT" ? 'selected' : '' }}>JnT</option>
+                                    <option value="Poslaju" {{ $shipping->shp_courier == "Poslaju" ? 'selected' : '' }}>Poslaju</option>
+                                    <option value="DHL" {{ $shipping->shp_courier == "DHL" ? 'selected' : '' }}>DHL</option>
+                                    <option value="NinjaVan" {{ $shipping->shp_courier == "NinjaVan" ? 'selected' : '' }}>NinjaVan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="scomment" class="form-label mt-4">Comment</label>
+                                <input type="text" class="form-control" placeholder="Shipping Date" name="shp_comment" value="{{$shipping->shp_comment}}"/>
+                            </div>
+                            <div class="form-group">
                                 <label for="status" class="form-label mt-4">Status</label>
                                 <select class="form-select" name="shp_status" id="exampleSelect1">
                                     <option value="1" {{ $shipping->shp_status == 1 ? 'selected' : '' }}>Pending</option>

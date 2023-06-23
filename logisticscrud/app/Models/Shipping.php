@@ -20,7 +20,9 @@ class Shipping extends Model
     protected $fillable = [
         'shp_oid',
         'shp_date',
-        'shp_status'
+        'shp_status',
+        'shp_courier',
+        'shp_comment'
     ];
 
     public $timestamps = false;
